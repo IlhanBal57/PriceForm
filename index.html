@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ürün Seçme Uygulaması</title>
+</head>
+<body>
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Kod</th>
+                <th>Açıklama</th>
+                <th>Miktar</th>
+                <th>Birim Fiyat</th>
+                <th>Tutarı</th>
+                <th>Düzenle</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5" style="text-align:center">Toplam Tutar:</td>
+                <td id="totalPrice" colspan="2" style="text-align:center;">0 TL</td>
+            </tr>
+        </tfoot>
+    </table>
+    <button id="addButton" style="margin-top: 20px;">+</button>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <form id="productForm" style="display:none;">
+                <label id="label1" style="display:none;">Stock Ürün Id</label>
+                <select id="dropdown1" style="display:none;">
+                    <option value="" disabled selected>Seçim 1</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                </select>
+                <label id="label2" style="display:none;">Stock Ürün Id</label>
+                <select id="dropdown2" style="display:none;"></select>
+                <label id="label3" style="display:none;">Stock Ürün Id</label>
+                <select id="dropdown3" style="display:none;"></select>
+                <label id="quantityLabel" style="display:none;">Miktarı</label>
+                <input type="number" id="quantity" style="display:none;" value="1" min="1">
+                <button type="button" id="submitButton" style="display:none;">Ekle</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
